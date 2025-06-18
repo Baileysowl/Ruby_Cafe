@@ -1,9 +1,9 @@
 require 'minitest/autorun'
-require_relative 'tests'  
+require_relative 'coffee_shop'  
 
 class TestOrder < Minitest::Test
   def setup
-    @order = Order.new
+    @order = CoffeeShop.new
   end
 
   def test_add_item_valid
