@@ -23,6 +23,21 @@ class CoffeeShop
   end
 
   def serve_customer
+    def add_item(item, quantity)
+  return false unless MENU.key?(item)
+
+  @order[item] ||= 0
+  @order[item] += quantity
+  true
+end
+
+def items
+  @order
+end
+
+def total
+  calculate_total
+end
     display_menu
     take_order
     if @order.empty?
